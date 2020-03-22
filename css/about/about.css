@@ -1,0 +1,61 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-weight: normal;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+body
+{
+    background-color: #4EA1BB;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+body > h1
+{
+    margin-top: 2%;
+    font-family: Prata;
+    font-size: 5rem;
+    margin-bottom: 2%;
+    color: rgba(0, 0, 0, 0.75)
+}
+
+#text
+{
+    font-family: Poppins;
+    font-size: 1rem;
+    width: 70%;
+    background-color: white;
+    padding: 2vh;
+    border-radius: 0.25rem;
+}
+
+li
+{
+    display: inline-block;
+    margin-right: 2vw;
+    font-family: Permanent Marker;
+}
+
+li > img
+{
+    width: 2vw;
+    margin-right: 0.25vw;
+}
+
+ul
+{
+    margin-top: 5vh;
+    text-align: center;
+}
