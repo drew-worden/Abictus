@@ -16,41 +16,126 @@ a
 
 body
 {
+    background-color: #e8eddf;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+#main-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-container > h1
+{
+    font-family: Prata;
+    font-size: 5vw;
+    position: relative;
+}
+
+#main-container > h1::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.25vw;
+    bottom: 0;
+    left: 0;
+    background-color:#333333;
+    border-radius: 1000px;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-out;
+    margin-bottom: 1vh;
+}
+
+#main-container > h1:hover::before
+{
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+#text-container
+{
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
     background-color: #6ba6e5;
-    height: 100vh;
+    width: 85%;
+    padding: 3vh;
+    border-radius: 0.25rem;
 }
 
-body > h1
+#text-container > h2
 {
-    font-family: Prata;
-    font-size: 5vw;
+    font-family: Forum;
+    font-size: 3vw;
+    margin-bottom: 2vh;
 }
 
 #text
 {
     background-color: #e8eddf;
-    width: 80%;
+    width: 100%;
     border-radius: 0.25rem;
-    padding: 0.75vw;
+    padding: 1.5vh;
     font-family: Montserrat;
     font-size: 1.25vw;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+#text:hover
+{
+    box-shadow: 9px 10px 24px 2px rgba(51,51,51,1);
 }
 
 img
 {
     width: 3.5vw;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    border-radius: 10000px;
 }
 
-.link-container
+img:hover
+{
+    box-shadow: 9px 10px 24px 2px rgba(51,51,51,1);
+}
+
+#link-container
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    justify-items: center;
+    grid-gap: 3vw;
+}
+
+@media only screen and (max-width: 800px)
+{
+    #main-container > h1
+    {
+        margin-bottom: -20vh;
+    }
+
+    #main-container > h1::before
+    {
+        margin-bottom: 0.5vh;
+    }
+
+    #link-container
+    {
+        margin-top: -20vh;
+    }
 }
 
 

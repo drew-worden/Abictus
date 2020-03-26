@@ -107,7 +107,7 @@ body
 #left > h2
 {
     font-family: Forum;
-    font-size: 2rem;
+    font-size: 2vw;
     margin: 2vh;
     color: #333333;
 }
@@ -115,7 +115,7 @@ body
 #right > h2
 {
     font-family: Forum;
-    font-size: 2rem;
+    font-size: 2vw;
     margin: 2vh;
     color: #333333;
 }
@@ -123,7 +123,7 @@ body
 #center > h2
 {
     font-family: Forum;
-    font-size: 3rem;
+    font-size: 3vw;
     margin: 3vh;
     text-align: center;
     color: #333333;
@@ -146,7 +146,6 @@ body
     transition-property: box-shadow;
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
-    cursor: default;
 }
 
 .paragraph:hover
@@ -162,7 +161,6 @@ body
     transition-property: box-shadow;
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
-    cursor: default;
 }
 
 #num-wrapper
