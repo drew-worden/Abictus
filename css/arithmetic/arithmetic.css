@@ -11,23 +11,47 @@
 a
 {
     text-decoration: none;
-    color: black;
+    color: #333333;
 }
 
 body
 {
-    background-color: #4EA1BB;
+    background-color: #e8eddf;
     display: grid;
-    grid-template-rows: 25vh 75vh;
+    grid-template-rows: 20vh 80vh;
     grid-template-columns: 1fr 3fr 1fr;
+    position: fixed;
 }
 
 #top > h1
 {
     font-family: Prata;
     font-size: 4.5rem;
-    color: rgba(0, 0, 0, 0.75);
+    color: #333333;
     margin-bottom: -10vh;
+    position: relative;
+}
+
+#top > h1::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.5vh;
+    bottom: 0;
+    left: 0;
+    background-color:#333333;
+    border-radius: 1000px;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-out;
+    margin-bottom: 1vh;
+}
+
+#top > h1:hover::before
+{
+    transform: scaleX(1);
+    transform-origin: bottom center;
 }
 
 #top
@@ -43,8 +67,8 @@ body
 {
     grid-row: 2;
     grid-column: 1;
-    background-color: white;
-    margin: 2.5vh 2.5vh 0 5vh;
+    background-color: #6ba6e5;
+    margin: 2.5vh 2.5vh 2.5vh 5vh;
     border-radius: 0.25rem;
     display: grid;
     justify-items: center;
@@ -54,17 +78,18 @@ body
 {
     grid-row: 2;
     grid-column: 2;
-    background-color: white;
-    margin: 2.5vh 2.5vh 0 2.5vh;
+    background-color: #6ba6e5;
+    margin: 2.5vh 2.5vh 2.5vh 2.5vh;
     border-radius: 0.25rem;
+    overflow: auto;
 }
 
 #right
 {
     grid-row: 2;
     grid-column: 3;
-    background-color: white;
-    margin: 2.5vh 5vh 0 2.5vh;
+    background-color: #6ba6e5;
+    margin: 2.5vh 5vh 2.5vh 2.5vh;
     border-radius: 0.25rem;
     display: grid;
     justify-items: center;
@@ -73,21 +98,145 @@ body
 #bar
 {
     height: 0.5vh;
-    background-color:rgba(0, 0, 0, 0.75);
+    background-color:#373f47;
     width: 95%;
     align-self: flex-end;
+    border-radius: 1000px;
 }
 
 #left > h2
 {
-    font-family: Poppins;
+    font-family: Forum;
     font-size: 2rem;
-    margin-top: 2vh;
+    margin: 2vh;
+    color: #333333;
 }
 
 #right > h2
 {
-    font-family: Poppins;
+    font-family: Forum;
     font-size: 2rem;
-    margin-top: 2vh;
+    margin: 2vh;
+    color: #333333;
 }
+
+#center > h2
+{
+    font-family: Forum;
+    font-size: 3rem;
+    margin: 3vh;
+    text-align: center;
+    color: #333333;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.paragraph
+{
+    border-radius: 0.25rem;
+    background-color: #e8eddf;
+    font-family: Montserrat;
+    font-size: 2.5vh;
+    height: auto;
+    padding: 1.5vh;
+    color: #333333;
+    width: 95%;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    cursor: default;
+}
+
+.paragraph:hover
+{
+    box-shadow: 9px 10px 24px 2px rgba(51,51,51,1);
+}
+
+#p1
+{
+    width: 95%;
+    margin: auto;
+    margin-top: 3vh;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    cursor: default;
+}
+
+#num-wrapper
+{
+    margin-top: 1.5vw;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+}
+
+.num
+{
+    position: relative;
+    font-family: Forum;
+    font-size: 2.5vw;
+    animation-name: reverseNumAnimation;
+    animation-duration: 2000ms;
+    width: 3.0vw;
+    height: 3.0vw;
+    text-align: center;
+}
+
+.num > .front
+{
+    position: absolute;
+    transform: perspective(600px) rotateX(0deg);
+    background-color: #e8eddf;
+    width: 3.0vw;
+    height: 3.0vw;
+    border-radius: 0.25rem;
+    backface-visibility: hidden;
+    transition: transform 0.5s linear 0s;
+    color: #333333;
+}
+
+.num > .back
+{
+    position: absolute;
+    transform: perspective(600px) rotateX(-180deg);
+    background-color: #e8eddf;
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 0.25rem;
+    backface-visibility: hidden;
+    transition: transform 0.5s linear 0s;
+    color: #333333;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+.num:hover > .front
+{
+    transform: perspective(600px) rotateX(180deg);
+}
+
+.num:hover > .back
+{
+    transform: perspective(600px) rotateX(0deg);
+}
+
+#seven
+{
+    font-size: 1.3vw;
+}
+
+#p2
+{
+    width: 95%;
+    margin: auto;
+    margin-top: 1.5vw;
+    margin-bottom: 3vh;
+}
+

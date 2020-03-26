@@ -15,7 +15,7 @@ a
 
 body
 {
-    background-color: #4EA1BB;
+    background-color: #e8eddf;
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 30vh 70vh;
@@ -44,7 +44,7 @@ body
     margin-top: 5vh;
     font-family: Prata;
     font-size: 4.5rem;
-    color: rgba(0, 0, 0, 0.75);
+    color: #333333;
 }
 
 #bottom-container
@@ -60,7 +60,7 @@ body
 
 .tile
 {
-    background-color: white;
+    background-color: #6ba6e5;
     width: 15vw;
     height: 23vh;
     display: grid;
@@ -72,9 +72,10 @@ body
 
 .tile > h2
 {
-    font-family: Permanent Marker;
+    font-family: Forum;
     font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.75)
+    color: #333333;
+    text-align: center;
 }
 
 @keyframes tile
