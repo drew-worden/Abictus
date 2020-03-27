@@ -89,7 +89,7 @@ body
     font-family: Montserrat;
     font-size: 1.25vw;
     transition-property: box-shadow;
-    transition-duration: 500ms;
+    transition-duration: 360ms;
     transition-timing-function: ease-in-out;
 }
 
@@ -102,7 +102,7 @@ img
 {
     width: 3.5vw;
     transition-property: box-shadow;
-    transition-duration: 500ms;
+    transition-duration: 360ms;
     transition-timing-function: ease-in-out;
     border-radius: 10000px;
 }

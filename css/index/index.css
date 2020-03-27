@@ -1,3 +1,8 @@
+img
+{
+    width: 100px;
+}
+
 *
 {
     margin: 0;
@@ -11,90 +16,128 @@
 a
 {
     text-decoration: none;
+    color: black;
 }
 
 body
 {
-    background-color: #e8eddf;
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 30vh 70vh;
-}
-
-#top > img
-{
-    width: 7%;
-    height: auto;
-    margin-bottom: -5vh;
-    margin-top: 2vh;
-}
-
-#top
-{
     width: 100%;
     height: 100%;
+    background-color: #e8eddf;
+}
+
+#title-container
+{
+    background-color: #e8eddf;
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
 }
 
-#top > h1
+#title-text
 {
-    margin-top: 5vh;
     font-family: Prata;
     font-size: 4.5rem;
     color: #333333;
+    margin-bottom: 2vh;
+    position: relative;
 }
 
-#bottom-container
+#title-text::before
 {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.5vh;
+    bottom: 0;
+    left: 0;
+    background-color:#333333;
+    border-radius: 1000px;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-out;
+    margin-bottom: 1vh;
+}
+
+#title-text:hover::before
+{
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+#content-container
+{
+    background-color: #e8eddf;
+    width: 100%;
+    height: 100%;
+}
+
+#column-container
+{
+    background-color: #e8eddf;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: auto auto auto auto auto;
 }
 
-.tile
+.column
 {
     background-color: #6ba6e5;
-    width: 15vw;
-    height: 23vh;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+    height: 89%;
+    margin: 0 2vw;
+    margin-top: 4vh;
     border-radius: 0.25rem;
-    overflow: hidden;
+    display: grid;
 }
 
-.tile > h2
+#bar
 {
-    font-family: Forum;
-    font-size: 1.5rem;
-    color: #333333;
+    background-color: #333333;
+    height: 0.5vh;
+    width: 96%;
+    border-radius: 1000px;
+}
+
+.column-title
+{
+    margin-top: 2.5vh;
+    background-color: #e8eddf;
+    width: 13.5vw;
+    height: 7vh;
+    justify-self: center;
+    border-radius: 0.25rem;
+    display: grid;
+    transition-property: box-shadow;
+    transition-duration: 360ms;
+    transition-timing-function: ease-in-out;
+}
+
+.column-title:hover
+{
+    box-shadow: 9px 10px 24px 2px rgba(51,51,51,1);
+}
+
+.course-title
+{
     text-align: center;
+    align-self: center;
+    font-family: Forum;
+    font-size: 2vw;
+    color: #333333;
 }
 
-@keyframes tile
+.column-content
 {
-    from
-    {
-        width: 15vw;
-        height: 23vh;
-    }
-    
-    to
-    {
-        width: 16vw;
-        height: 24vh;
-    }
-}
-
-.tile:hover
-{
-    animation-name: tile;
-    animation-duration: 1s;
+    margin-top: 2.5vh;
+    background-color: #e8eddf;
+    width: 13.5vw;
+    height: 48vh;
+    margin-bottom: 2.5vh;
+    justify-self: center;
+    border-radius: 0.25rem;
 }
