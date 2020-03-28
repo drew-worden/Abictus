@@ -1,14 +1,11 @@
-var coll = document.getElementsByClassName("chapter-coll");
-var i;
+const animations = document.querySelectorAll("video")
 
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight){
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      } 
-    });
-  }
+animations.forEach(video => {
+  video.addEventListener("mouseover", function(){
+    this.play()
+  })
+
+  video.addEventListener("mouseout", function(){
+    this.pause()
+  })
+})

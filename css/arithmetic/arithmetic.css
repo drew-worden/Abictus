@@ -82,6 +82,9 @@ body
     margin: 2.5vh 2.5vh 2.5vh 2.5vh;
     border-radius: 0.25rem;
     overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 #right
@@ -157,7 +160,6 @@ body
 {
     width: 95%;
     margin: auto;
-    margin-top: 3vh;
     transition-property: box-shadow;
     transition-duration: 360ms;
     transition-timing-function: ease-in-out;
@@ -236,5 +238,21 @@ body
     margin: auto;
     margin-top: 1.5vw;
     margin-bottom: 3vh;
+}
+
+.animation
+{
+    width: 95%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-bottom: 3vh;
+    transition-property: box-shadow;
+    transition-duration: 360ms;
+    transition-timing-function: ease-in-out;
+}
+
+.animation:hover
+{
+    box-shadow: 9px 10px 24px 2px rgba(51,51,51,1);
 }
 
