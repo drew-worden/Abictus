@@ -73,11 +73,13 @@ body
     border-radius: 0.25rem;
 }
 
-#text-container > h2
+#title
 {
     font-family: Forum;
     font-size: 3vw;
-    margin-bottom: 2vh;
+    color: #333333;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 #text
@@ -136,6 +138,18 @@ img:hover
     {
         margin-top: -20vh;
     }
+}
+
+#title-container
+{
+    background-color: #e8eddf;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.25rem;
+    margin-bottom: 3vh;
+    border-color: #333333;
+    border-style: double;
+    border-width: 0.4vw;
 }
 
 
