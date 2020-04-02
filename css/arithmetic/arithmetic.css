@@ -72,6 +72,7 @@ body
     border-radius: 0.25rem;
     display: grid;
     justify-items: center;
+    grid-template-rows: 15vh 85vh;
 }
 
 #center
@@ -96,6 +97,7 @@ body
     border-radius: 0.25rem;
     display: grid;
     justify-items: center;
+    grid-template-rows: 15vh 85vh;
 }
 
 .bar
@@ -301,5 +303,59 @@ h3
 #decimal-value-title
 {
     margin: 2vh;
+}
+
+.title
+{
+    margin: 2vh;
+}
+
+.title-container
+{
+    background-color: #e8eddf;
+    border-radius: 0.25rem;
+    border-color: #333333;
+    border-style: double;
+    border-width: 0.4vw;
+    width: 85%;
+    height: 9vh;
+    margin-top: 3vh;
+    text-align: center;
+    display: grid;
+}
+
+.title-container > h2
+{
+    align-self: center;
+    font-family: Forum;
+    font-size: 2.25vw;
+}
+
+.column-container
+{
+    background-color: #e8eddf;
+    width: 85%;
+    height: 67%;
+    border-radius: 0.25rem;
+}
+
+.topics
+{
+    font-family: Montserrat;
+    font-size: 1.75vw;
+    text-align: center;
+    margin: 1.25vh 0.5vw;
+}
+
+#first-topic
+{
+}
+
+#bar
+{
+    background-color: #333333;
+    height: 2px;
+    width: 85%;
+    margin: auto;
 }
 

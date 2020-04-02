@@ -29,6 +29,14 @@ body
     background-color: #e8eddf;
 }
 
+#bar
+{
+    background-color: #333333;
+    height: 2px;
+    width: 85%;
+    margin: auto;
+}
+
 #title-container
 {
     background-color: #e8eddf;
@@ -95,14 +103,6 @@ body
     display: grid;
 }
 
-#bar
-{
-    background-color: #333333;
-    height: 0.5vh;
-    width: 96%;
-    border-radius: 1000px;
-}
-
 .column-title
 {
     margin-top: 2.5vh;
@@ -146,25 +146,5 @@ body
     position: relative;
 }
 
-.text::before
-{
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 0.5vh;
-    bottom: 0;
-    left: 0;
-    background-color:#333333;
-    border-radius: 1000px;
-    transform-origin: bottom center;
-    transition: transform 0.5s ease-out;
-    margin-bottom: -1vh;
-}
 
-.text:hover::before
-{
-    transform: scaleX(0.6);
-    transform-origin: bottom center;
-}
 
